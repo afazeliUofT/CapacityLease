@@ -5,12 +5,15 @@
 #SBATCH --time=04:00:00
 #SBATCH --output=cpctlease_%j.log
 
-module load python/3.11 scipy-stack
+set -euo pipefail
 
-python -m venv ~/venvs/cpctlease || true
-source ~/venvs/cpctlease/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
+module purge
+module load StdEnv/2023 python/3.11 scipy-stack/2024a
+
+REPO_DIR="$HOME/scratch/cpctlease_code_package"
+cd "$REPO_DIR"
+
+source "$HOME/venvs/cpctlease/bin/activate"
 
 export MPLCONFIGDIR=${SLURM_TMPDIR:-$PWD/.mpl-cache}
 mkdir -p "$MPLCONFIGDIR"

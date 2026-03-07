@@ -1,0 +1,2 @@
+[console_scripts]
+cpctlease = capacity_lease.cli:main
