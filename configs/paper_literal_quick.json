@@ -1,0 +1,83 @@
+{
+  "model": {
+    "group_sizes": [
+      200,
+      200,
+      900,
+      700
+    ],
+    "alpha": [
+      3.0,
+      3.0,
+      2.0,
+      1.0
+    ],
+    "beta": [
+      0.2,
+      0.6,
+      0.6,
+      1.0
+    ],
+    "monopoly_noise_mean": [
+      3.0,
+      2.0,
+      2.0,
+      0.5
+    ],
+    "monopoly_noise_sd": [
+      0.1,
+      1.0,
+      0.8,
+      0.1
+    ],
+    "mno_noise_mean": [
+      2.5,
+      1.5,
+      1.5,
+      0.2
+    ],
+    "mno_noise_sd": [
+      0.1,
+      1.0,
+      0.8,
+      0.1
+    ],
+    "mvno_noise_mean": [
+      0.5,
+      2.5,
+      1.5,
+      3.0
+    ],
+    "mvno_noise_sd": [
+      0.1,
+      1.0,
+      0.8,
+      0.1
+    ],
+    "capacity_mbps": 1000.0,
+    "delta": 0.1,
+    "zeta": 0.01,
+    "lambda_retention": 0.1,
+    "participation_fee": 500.0
+  },
+  "solver": {
+    "root_xtol": 1e-10,
+    "root_rtol": 1e-10,
+    "max_root_iter": 200,
+    "use_fast_bvn_if_available": true,
+    "market_clearing_quantile_tail": "lower",
+    "monopoly_price_points": 1501,
+    "monopoly_plot_price_max": 150.0,
+    "capacity_step_mbps": 500.0,
+    "market_clearing_search_points": 9,
+    "flexible_nM_search_points": 5,
+    "flexible_nV_search_points": 5,
+    "refine_levels": 1,
+    "top_k_seeds": 1,
+    "nM_curve_points": 11,
+    "workers": 1,
+    "chunksize": 1,
+    "reported_market_clearing_capacity_mbps": 100.0,
+    "reported_flexible_capacity_mbps": 350.0
+  }
+}
