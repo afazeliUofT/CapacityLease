@@ -211,13 +211,55 @@ class FlexibleSolverLocal:
     def solve_prices(self, CV: float, nM: float, nV: float) -> tuple[float, float] | None:
         """Solve the flexible-participation price system.
 
-        The nested monotone solver is used by default because it is markedly faster
-        and more stable for the paper's parameter ranges than a general 2-D local
-        least-squares fallback. The fallback routine is intentionally kept in the
-        module for users who want to experiment with alternate parameter regimes,
-        but it is not enabled in the default paper pipeline.
+        The nested monotone solver is tried first because it is much faster for
+        the paper's parameter ranges than the general 2-D least-squares fallback.
+        Unlike the original version, this method now validates the returned price
+        pair by re-evaluating both fixed-point equations and only accepts a
+        candidate when the residual norm is numerically tight.
         """
-        return self._solve_prices_nested(CV, nM, nV)
+
+        def residual_norm(pair: tuple[float, float] | None) -> float:
+            if pair is None:
+                return math.inf
+            pM, pV = float(pair[0]), float(pair[1])
+            if not np.isfinite(pM) or not np.isfinite(pV):
+                return math.inf
+            if pM < 0.0 or pV < 0.0:
+                return math.inf
+            residual = np.array(
+                [
+                    self.kernel.theta_m(pM, pV, CV, nM, nV) - nM,
+                    self.kernel.theta_v(pM, pV, CV, nM, nV) - nV,
+                ],
+                dtype=float,
+            )
+            if not np.all(np.isfinite(residual)):
+                return math.inf
+            return float(np.linalg.norm(residual, ord=2))
+
+        tolerance = max(1e-5, 100.0 * self.solver.root_xtol)
+
+        nested = self._solve_prices_nested(CV, nM, nV)
+        nested_norm = residual_norm(nested)
+        if nested is not None and nested_norm <= tolerance:
+            return float(nested[0]), float(nested[1])
+
+        fallback = self._solve_prices_fallback(CV, nM, nV)
+        fallback_norm = residual_norm(fallback)
+
+        best_pair: tuple[float, float] | None = None
+        best_norm = math.inf
+        for pair, norm in ((nested, nested_norm), (fallback, fallback_norm)):
+            if pair is None:
+                continue
+            if norm < best_norm:
+                best_pair = pair
+                best_norm = norm
+
+        if best_pair is None or not np.isfinite(best_norm) or best_norm > tolerance:
+            return None
+
+        return float(best_pair[0]), float(best_pair[1])
 
     def candidate_state(self, CV: float, nM: float, nV: float) -> FlexibleState:
         prices = self.solve_prices(CV, nM, nV)
