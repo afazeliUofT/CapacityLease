@@ -1,0 +1,119 @@
+{
+  "config": {
+    "model": {
+      "alpha": [
+        3.0,
+        3.0,
+        2.0,
+        1.0
+      ],
+      "beta": [
+        0.2,
+        0.6,
+        0.6,
+        1.0
+      ],
+      "capacity_mbps": 1000.0,
+      "delta": 0.1,
+      "group_sizes": [
+        200.0,
+        200.0,
+        900.0,
+        700.0
+      ],
+      "lambda_retention": 0.1,
+      "mno_noise_mean": [
+        2.5,
+        1.5,
+        1.5,
+        0.2
+      ],
+      "mno_noise_sd": [
+        0.1,
+        1.0,
+        0.8,
+        0.1
+      ],
+      "monopoly_noise_mean": [
+        3.0,
+        2.0,
+        2.0,
+        0.5
+      ],
+      "monopoly_noise_sd": [
+        0.1,
+        1.0,
+        0.8,
+        0.1
+      ],
+      "mvno_noise_mean": [
+        0.5,
+        2.5,
+        1.5,
+        3.0
+      ],
+      "mvno_noise_sd": [
+        0.1,
+        1.0,
+        0.8,
+        0.1
+      ],
+      "participation_fee": 500.0,
+      "zeta": 0.01
+    },
+    "solver": {
+      "capacity_step_mbps": 5.0,
+      "chunksize": 1,
+      "flexible_nM_search_points": 25,
+      "flexible_nV_search_points": 25,
+      "market_clearing_quantile_tail": "lower",
+      "market_clearing_search_points": 161,
+      "max_root_iter": 200,
+      "monopoly_plot_price_max": 150.0,
+      "monopoly_price_points": 1501,
+      "nM_curve_points": 401,
+      "refine_levels": 2,
+      "reported_flexible_capacity_mbps": 350.0,
+      "reported_market_clearing_capacity_mbps": 100.0,
+      "root_rtol": 1e-10,
+      "root_xtol": 1e-10,
+      "top_k_seeds": 2,
+      "use_fast_bvn_if_available": true,
+      "workers": 32
+    }
+  },
+  "flexible_best_capacity": {
+    "capacity_leased_mbps": 120.0,
+    "nM": 199.0625,
+    "nV": 1188.4120008680557,
+    "pM": 67.68425243230267,
+    "pV": 2.847989467570981,
+    "rM_mbps": 44.20722135007849,
+    "rV_mbps": 1.0097508264166637,
+    "revenue_mno_total": 16019.52287525171,
+    "revenue_mvno_gross": 3384.584861607178,
+    "revenue_mvno_retained": 338.4584861607178,
+    "valid": true
+  },
+  "market_clearing_best_capacity": {
+    "capacity_leased_mbps": 510.0,
+    "nM": 198.1279513787215,
+    "nV": 1801.8720486212785,
+    "nV_hi": 1990.0,
+    "nV_lo": 80.29876073782945,
+    "pM": 43.71875277187173,
+    "pV": 2.8662507955113483,
+    "rM_mbps": 24.73149278485019,
+    "rV_mbps": 2.8303896516416462,
+    "revenue_mno_total": 12810.062397017111,
+    "revenue_mvno_gross": 5164.617192770403,
+    "valid": true
+  },
+  "monopoly": {
+    "critical_price": 119.4387559980438,
+    "optimal_price": 72.33981736833894,
+    "optimal_rate": 50.142171301507304,
+    "optimal_revenue": 14426.941532578656,
+    "optimal_subscribers": 199.43292722346453
+  }
+}

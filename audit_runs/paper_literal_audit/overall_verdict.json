@@ -1,0 +1,17 @@
+{
+  "flexible_pass": true,
+  "market_clearing_pass": true,
+  "material_shift_cases": [],
+  "monopoly_pass": false,
+  "overall_pass": false,
+  "parallel_invariance_pass": true,
+  "regression_pass": false,
+  "sensitivity_pass": true,
+  "thresholds": {
+    "flexible_residual_tol": 1e-05,
+    "numeric_compare_atol": 1e-06,
+    "numeric_compare_rtol": 1e-06,
+    "sensitivity_best_capacity_shift_tol_mbps": 5.0,
+    "sensitivity_best_revenue_rel_tol": 0.001
+  }
+}

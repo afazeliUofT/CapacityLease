@@ -1,0 +1,17 @@
+{
+  "cwd": "/scratch/rsadve1/cpctlease_code_package",
+  "env": {
+    "BLIS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "executable": "/home/rsadve1/venvs/cpctlease/bin/python",
+  "numpy": "2.4.2",
+  "pandas": "3.0.0",
+  "platform": "Linux-5.14.0-570.22.1.el9_6.x86_64-x86_64-AMD_EPYC_9135_16-Core_Processor-with-glibc2.37",
+  "python": "3.11.5 (main, Sep 19 2023, 16:07:22) [GCC 12.3.1 20230526]",
+  "scipy": "1.17.0"
+}

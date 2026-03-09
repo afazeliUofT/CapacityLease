@@ -1,0 +1,9 @@
+case,capacity_leased_mbps,valid,revenue_mno_total,revenue_mvno_gross,nM,nV,pM,pV,rM_mbps,rV_mbps
+dense_41_fast_bvn_off,100.0,False,,,,,,,,
+dense_41_fast_bvn_off,110.0,False,,,,,,,,
+dense_41_fast_bvn_off,115.0,False,,,,,,,,
+dense_41_fast_bvn_off,120.0,False,,,,,,,,
+dense_41_fast_bvn_off,125.0,False,,,,,,,,
+dense_41_fast_bvn_off,130.0,False,,,,,,,,
+dense_41_fast_bvn_off,140.0,False,,,,,,,,
+dense_41_fast_bvn_off,350.0,False,,,,,,,,
