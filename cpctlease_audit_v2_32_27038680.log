@@ -1,0 +1,52 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) CCconfig        6)  ucx/1.14.1         11) flexiblas/3.3.1
+  2) gentoo/2023     7)  libfabric/1.18.0   12) aocl-blas/5.1
+  3) gcccore/.12.3   8)  pmix/4.2.4         13) aocl-lapack/5.1
+  4) gcc/12.3        9)  ucc/1.2.0          14) StdEnv/2023
+  5) hwloc/2.9.1     10) openmpi/4.1.5
+{
+  "flexible_pass": true,
+  "market_clearing_pass": true,
+  "material_shift_cases": [
+    "dense_41",
+    "dense_61",
+    "tight_dense_61",
+    "dense_41_fast_bvn_off"
+  ],
+  "monopoly_pass": true,
+  "overall_pass": false,
+  "parallel_invariance_pass": true,
+  "regression_pass": true,
+  "sensitivity_pass": false,
+  "thresholds": {
+    "flexible_residual_tol": 1e-05,
+    "numeric_compare_atol": 1e-06,
+    "numeric_compare_rtol": 1e-06,
+    "sensitivity_best_capacity_shift_tol_mbps": 5.0,
+    "sensitivity_best_revenue_rel_tol": 0.001
+  }
+}
+{
+  "flexible_pass": true,
+  "market_clearing_pass": true,
+  "material_shift_cases": [
+    "dense_41",
+    "dense_61",
+    "tight_dense_61",
+    "dense_41_fast_bvn_off"
+  ],
+  "monopoly_pass": true,
+  "overall_pass": false,
+  "parallel_invariance_pass": true,
+  "regression_pass": true,
+  "sensitivity_pass": false,
+  "thresholds": {
+    "flexible_residual_tol": 1e-05,
+    "numeric_compare_atol": 1e-06,
+    "numeric_compare_rtol": 1e-06,
+    "sensitivity_best_capacity_shift_tol_mbps": 5.0,
+    "sensitivity_best_revenue_rel_tol": 0.001
+  }
+}

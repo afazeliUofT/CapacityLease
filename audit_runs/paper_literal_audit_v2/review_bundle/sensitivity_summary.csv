@@ -1,0 +1,6 @@
+case,merged_rows,capacity_grid_identical,max_abs_diff_revenue_mno_total,max_abs_diff_revenue_mvno_gross,max_abs_diff_nM,max_abs_diff_nV,max_abs_diff_pM,max_abs_diff_pV,valid_status_flip_count,baseline_has_best_row,candidate_has_best_row,missing_best_row,best_capacity_shift_mbps,best_revenue_abs_diff,best_revenue_rel_diff,best_capacity_baseline,best_capacity_candidate,best_revenue_baseline,best_revenue_candidate
+parallel_baseline,200,True,0.0,0.0,0.0,0.0,0.0,0.0,0,True,True,False,0.0,0.0,0.0,120.0,120.0,16019.52287525171,16019.52287525171
+dense_41,200,True,0.0,0.0,0.0,0.0,0.0,0.0,61,True,False,True,,,,120.0,,16019.52287525171,
+dense_61,200,True,3.1448088575671136,0.5180040781788193,0.32450000000000045,0.38647846667549857,0.09577101080628836,0.0006062237370390022,2,True,True,False,0.0,0.08105171637726016,5.0595331037376165e-06,120.0,120.0,16019.52287525171,16019.603926968088
+tight_dense_61,200,True,3.144808817167359,0.5180040883260517,0.32450000000000045,0.38647846667549857,0.09577101080628836,0.0006062237370390022,2,True,True,False,0.0,0.08105171637726016,5.0595331037376165e-06,120.0,120.0,16019.52287525171,16019.603926968088
+dense_41_fast_bvn_off,200,True,0.0,0.0,0.0,0.0,0.0,0.0,61,True,False,True,,,,120.0,,16019.52287525171,
