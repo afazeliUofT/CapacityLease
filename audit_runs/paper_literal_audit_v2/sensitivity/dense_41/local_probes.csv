@@ -1,9 +1,0 @@
-case,capacity_leased_mbps,valid,revenue_mno_total,revenue_mvno_gross,nM,nV,pM,pV,rM_mbps,rV_mbps
-dense_41,100.0,False,,,,,,,,
-dense_41,110.0,False,,,,,,,,
-dense_41,115.0,False,,,,,,,,
-dense_41,120.0,False,,,,,,,,
-dense_41,125.0,False,,,,,,,,
-dense_41,130.0,False,,,,,,,,
-dense_41,140.0,False,,,,,,,,
-dense_41,350.0,False,,,,,,,,
